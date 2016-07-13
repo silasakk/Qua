@@ -140,9 +140,9 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 
-function load_template_part($template_name, $part_name=null) {
+function load_template_part($template_name) {
 	ob_start();
-	get_template_part($template_name, $part_name);
+	get_template_part($template_name);
 	$var = ob_get_contents();
 	ob_end_clean();
 	return $var;
