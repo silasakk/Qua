@@ -1,10 +1,13 @@
 
 <!doctype html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <link href='https://fonts.googleapis.com/css?family=Kanit:400,700' rel='stylesheet' type='text/css'>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js" ?>" type="text/javascript"></script>
+
 </head>
 <body>
 <style>
@@ -12,8 +15,8 @@
     body{
         padding: 0;
         margin: 0;
-        font-family: 'Kanit';
-        font-size: 12px;
+        font-family: 'thaisan';
+        font-size: 16px;
     }
     *{
         box-sizing: border-box;
@@ -41,6 +44,8 @@
 
     }
     .box{
+        width: 100%;
+        float:left;
         padding: 10px 10px 20px 10px;
         border:2px solid #000;
     }
@@ -50,7 +55,7 @@
     .label-en{
         font-size: 12px;
     }
-    .table{
+    table,.table{
         width: 100%;
         margin: 5px 0;
     }
@@ -66,16 +71,22 @@
     .pull-left{
         float: left;
     }
+    p{
+        margin: 0;
+        padding: 0;
+    }
     .head-black{
         color: #fff;
         background: #000;
         text-align: center;
-        padding: 0;
+        padding: 10px 0;
         margin: 0;
+        width:100%;
+        float: left;
     }
     .header{
         background: #000;
-        padding: 15px 0;
+        padding: 5px 0;
         margin: 0;
     }
 </style>
@@ -83,7 +94,7 @@
     <table>
         <tr>
             <td width="50%"  style="color: #ffffff;text-align: center" >
-                <h1 style="font-size: 50px;" >STORYWORK</h1>
+                <h1 style="font-size: 50px;padding: 0;margin: 0" >STORYWORK</h1>
             </td>
             <td width="50%" style="color: #fff">
                 <p><strong>บริษัท สตอรี่เวิร์ค จำกัด (สำนักงานใหญ่)</strong></p>
@@ -429,5 +440,6 @@
         <?php the_field('client',$user_id) ?>
     </div>
 </div>
+
 </body>
 </html>

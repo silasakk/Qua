@@ -202,13 +202,25 @@ $this->fontdata = array(
 		'BI' => "Garuda-BoldOblique.ttf",
 		'useOTL' => 0xFF,
 	),
-	"kanit" => array(/* Thai */
-		'R' => "Kanit-Regular.ttf",
-		'B' => "Kanit-Bold.ttf",
-		'I' => "Kanit-Italic.ttf",
-		'BI' => "Kanit-BoldItalic.ttf",
-	
+	"thaisan" => array(
+		'R' => "DB Helvethaica X v3.2.ttf",
+		'B' => "DB Helvethaica X Bd v3.2.ttf",
+
 	),
+	"cloud" => array(
+		'R' => "Cloud-Light.otf",
+		'B' => "Cloud-Bold.otf",
+
+	),
+
+
+	"thsarabunnew" => array(
+		'R' => "THSarabunNew.ttf",
+		'B' => "THSarabunNew-Bold.ttf",
+		'I' => "THSarabunNew-Italic.ttf",
+		'BI' => "THSarabunNew-BoldItalic.ttf",
+	),
+
 	"khmeros" => array(/* Khmer */
 		'R' => "KhmerOS.ttf",
 		'useOTL' => 0xFF,

@@ -147,3 +147,4 @@ function load_template_part($template_name) {
 	ob_end_clean();
 	return $var;
 }
+
