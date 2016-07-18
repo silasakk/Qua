@@ -4,6 +4,8 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mpdf/mpdf" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/setasign/fpdi" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/tecnickcom/tcpdf" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -22,10 +24,14 @@
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/mpdf/mpdf" />
+          <root url="file://$MODULE_DIR$/vendor/setasign/fpdi" />
+          <root url="file://$MODULE_DIR$/vendor/tecnickcom/tcpdf" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/mpdf/mpdf" />
+          <root url="file://$MODULE_DIR$/vendor/setasign/fpdi" />
+          <root url="file://$MODULE_DIR$/vendor/tecnickcom/tcpdf" />
         </SOURCES>
       </library>
     </orderEntry>

@@ -1,56 +1,5 @@
 [
     {
-        "name": "setasign/fpdi",
-        "version": "1.6.1",
-        "version_normalized": "1.6.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Setasign/FPDI.git",
-            "reference": "5b899b2b41463bf261aa69840fd30b50950a500c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Setasign/FPDI/zipball/5b899b2b41463bf261aa69840fd30b50950a500c",
-            "reference": "5b899b2b41463bf261aa69840fd30b50950a500c",
-            "shasum": ""
-        },
-        "suggest": {
-            "setasign/fpdf": "FPDI will extend this class but as it is also possible to use \"tecnickcom/tcpdf\" as an alternative there's no fixed dependency configured.",
-            "setasign/fpdi-fpdf": "Use this package to automatically evaluate dependencies to FPDF.",
-            "setasign/fpdi-tcpdf": "Use this package to automatically evaluate dependencies to TCPDF."
-        },
-        "time": "2015-11-30 10:53:14",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "filters/",
-                "fpdi.php",
-                "fpdf_tpl.php",
-                "fpdi_pdf_parser.php",
-                "pdf_context.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jan Slabon",
-                "email": "jan.slabon@setasign.com",
-                "homepage": "https://www.setasign.com"
-            }
-        ],
-        "description": "FPDI is a collection of PHP classes facilitating developers to read pages from existing PDF documents and use them as templates in FPDF. Because it is also possible to use FPDI with TCPDF, there are no fixed dependencies defined. Please see suggestions for packages which evaluates the dependencies automatically.",
-        "homepage": "https://www.setasign.com/fpdi",
-        "keywords": [
-            "fpdf",
-            "fpdi",
-            "pdf"
-        ]
-    },
-    {
         "name": "mpdf/mpdf",
         "version": "v6.1.1",
         "version_normalized": "6.1.1.0",
@@ -101,6 +50,57 @@
             "pdf",
             "php",
             "utf-8"
+        ]
+    },
+    {
+        "name": "setasign/fpdi",
+        "version": "1.6.1",
+        "version_normalized": "1.6.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Setasign/FPDI.git",
+            "reference": "5b899b2b41463bf261aa69840fd30b50950a500c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Setasign/FPDI/zipball/5b899b2b41463bf261aa69840fd30b50950a500c",
+            "reference": "5b899b2b41463bf261aa69840fd30b50950a500c",
+            "shasum": ""
+        },
+        "suggest": {
+            "setasign/fpdf": "FPDI will extend this class but as it is also possible to use \"tecnickcom/tcpdf\" as an alternative there's no fixed dependency configured.",
+            "setasign/fpdi-fpdf": "Use this package to automatically evaluate dependencies to FPDF.",
+            "setasign/fpdi-tcpdf": "Use this package to automatically evaluate dependencies to TCPDF."
+        },
+        "time": "2015-11-30 10:53:14",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "filters/",
+                "fpdi.php",
+                "fpdf_tpl.php",
+                "fpdi_pdf_parser.php",
+                "pdf_context.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jan Slabon",
+                "email": "jan.slabon@setasign.com",
+                "homepage": "https://www.setasign.com"
+            }
+        ],
+        "description": "FPDI is a collection of PHP classes facilitating developers to read pages from existing PDF documents and use them as templates in FPDF. Because it is also possible to use FPDI with TCPDF, there are no fixed dependencies defined. Please see suggestions for packages which evaluates the dependencies automatically.",
+        "homepage": "https://www.setasign.com/fpdi",
+        "keywords": [
+            "fpdf",
+            "fpdi",
+            "pdf"
         ]
     },
     {
@@ -166,61 +166,6 @@
             "pdf",
             "pdf417",
             "qrcode"
-        ]
-    },
-    {
-        "name": "spipu/html2pdf",
-        "version": "4.6.x-dev",
-        "version_normalized": "4.6.9999999.9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/spipu/html2pdf.git",
-            "reference": "e08d5acfc277cb22be7cdb28a17cd1c287559cb5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/spipu/html2pdf/zipball/e08d5acfc277cb22be7cdb28a17cd1c287559cb5",
-            "reference": "e08d5acfc277cb22be7cdb28a17cd1c287559cb5",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2",
-            "tecnickcom/tcpdf": "~6.2.0"
-        },
-        "suggest": {
-            "ext-gd": "Allows to embed images into the PDF",
-            "fagundes/zff-html2pdf": "zff-html2pdf module ~0.1.1, if you need to integrate HTML2PDF with Zend Framework 2 (zf2)"
-        },
-        "time": "2016-05-18 09:31:52",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "files": [
-                "html2pdf.class.php",
-                "_class/exception.class.php",
-                "_class/locale.class.php",
-                "_class/myPdf.class.php",
-                "_class/parsingHtml.class.php",
-                "_class/parsingCss.class.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "LGPL"
-        ],
-        "authors": [
-            {
-                "name": "Spipu",
-                "homepage": "https://github.com/spipu",
-                "role": "Developer"
-            }
-        ],
-        "description": "HTML2PDF is a HTML to PDF converter written in PHP5 (it uses TCPDF). OFFICIAL PACKAGE",
-        "homepage": "http://html2pdf.fr/",
-        "keywords": [
-            "html",
-            "html2pdf",
-            "pdf"
         ]
     }
 ]

@@ -150,7 +150,7 @@
                 <table class="table">
                     <tr>
                         <td width="110" class="text-right p-r-10 p-l-10">
-                            <div class="label-th">ประเถท</div>
+                            <div class="label-th">ประเภท</div>
                             <div class="label-en">Type</div>
                         </td>
                         <td class="bar-input text-center">
@@ -405,7 +405,7 @@
                             <div class="label-en">Account No.</div>
                         </td>
                         <td class="bar-input text-center">
-                            <?php the_field('client_bank_',$user_id) ?>
+                            <?php the_field('client_bank_no',$user_id) ?>
                         </td>
                     </tr>
                 </table>

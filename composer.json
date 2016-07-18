@@ -10,7 +10,6 @@
     }
   ],
   "require": {
-    "mpdf/mpdf": "v6.1.1",
-    "spipu/html2pdf": "4.6.x-dev"
+    "mpdf/mpdf": "v6.1.1"
   }
 }

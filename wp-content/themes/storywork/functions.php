@@ -148,3 +148,76 @@ function load_template_part($template_name) {
 	return $var;
 }
 
+function my_enqueue($hook) {
+    if($hook == "post.php" || $hook == "post-new.php" ){
+
+        wp_enqueue_script( 'main_js', get_template_directory_uri() . '/js/main.js' );
+        wp_localize_script( 'main_js', 'ajaxurl', array( 'url' => admin_url( 'admin-ajax.php' )));
+    }
+}
+add_action( 'admin_enqueue_scripts', 'my_enqueue' );
+
+function search_customer() {
+    $text = strtolower( $_GET['term'] );
+    $suggestions = array();
+
+    $args = array(
+        'post_type' => 'customer',
+        'meta_query' => array(
+            array(
+                'key'     => 'client_name',
+                'value'   => $text,
+                'compare' => 'LIKE',
+            ),
+        )
+    );
+
+    $loop = new WP_Query( $args );
+
+    while( $loop->have_posts() ) {
+        $loop->the_post();
+        $suggestion = array();
+        $suggestion['label'] = get_field('client_name');
+        $suggestion['client_contact_person'] = get_field('client_contact_person');
+        $suggestion['client_address'] = get_field('client_address');
+        $suggestion['client_tel'] = get_field('client_tel');
+        $suggestion['client_fax'] = get_field('client_fax');
+        $suggestion['client_phone'] = get_field('client_phone');
+        $suggestion['client_email'] = get_field('client_email');
+
+
+        $suggestions[] = $suggestion;
+    }
+
+    wp_reset_query();
+
+
+    $response = json_encode( $suggestions );
+    echo $response;
+    exit();
+
+}
+
+add_action( 'wp_ajax_search_customer', 'search_customer' );
+add_action( 'wp_ajax_nopriv_search_customer', 'search_customer' );
+
+function custom_menu_page_removing() {
+    remove_menu_page( 'edit.php' );                   //Posts
+    remove_menu_page( 'upload.php' );                 //Media
+    remove_menu_page( 'edit.php?post_type=page' );    //Pages
+    remove_menu_page( 'edit-comments.php' );          //Comments
+}
+add_action( 'admin_menu', 'custom_menu_page_removing' );
+
+add_action( 'admin_bar_menu', 'wpse126922_remove_newpost', 999 );
+
+function wpse126922_remove_newpost ( $wp_admin_bar ) {
+
+    //var_dump($wp_admin_bar);
+
+    $wp_admin_bar->remove_node( 'new-post' );
+    $wp_admin_bar->remove_node( 'new-page' );
+    $wp_admin_bar->remove_node( 'new-media' );
+    $wp_admin_bar->remove_node( 'comments' );
+}
+
